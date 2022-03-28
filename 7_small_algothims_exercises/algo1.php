@@ -1,16 +1,22 @@
 <?php
     //on initialise un nombre mystere
+    echo "\n####################\n";
+    echo "GUESS MYSTERY NUMBER\n";
+    echo "####################\n\n";
     $mystery_number = rand(0, 100);
-    echo "le nombre mystere est >> $mystery_number\n";
     
     //on repete ce bloc jusqu'à ce que l'utilisateur trouve la reponse
     do {
-        $tmp = readline("Guess the number : ");
+        $tmp = readline("Guess the number between 1 and 100: ");
         readline_add_history($tmp);
         echo "la reponse user est >> $tmp\n";
 
         //on verifie que la reponse user est un nombre et on la compare avec le nombre mystere
-        if(is_numeric($tmp)){
+        if(!is_numeric($tmp)){
+            echo "Give a number, not a string!\n";
+            continue;
+        }
+        elseif(is_numeric($tmp)){
             if($tmp > $mystery_number){
                 echo "less b*tch!\n";
             }
