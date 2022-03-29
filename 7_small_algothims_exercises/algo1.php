@@ -1,13 +1,13 @@
 <?php
     //on initialise un nombre mystere
     echo "\n####################\n";
-    echo "GUESS MYSTERY NUMBER\n";
+    echo "GUESS_MYSTERY_NUMBER\n";
     echo "####################\n\n";
     $mystery_number = rand(0, 100);
     
     //on repete ce bloc jusqu'à ce que l'utilisateur trouve la reponse
     do {
-        $tmp = readline("Guess the number between 1 and 100: ");
+        $tmp = readline("Guess the number between 1 and 100 >>");
         readline_add_history($tmp);
         echo "la reponse user est >> $tmp\n";
 
