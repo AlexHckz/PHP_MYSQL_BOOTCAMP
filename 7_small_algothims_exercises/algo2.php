@@ -4,7 +4,15 @@
     echo "####################\n\n";
 
     //on demande a user un nb entre 1 et 100
-    $tmp = (integer) readline("Choose a number between 1 - 100 >>");
+    do {
+        $tmp = readline("Choose a number between 1 - 100 >>");
+        if ((!is_int($tmp)) || !($tmp<101 && $tmp>0) ) {
+            echo "Not an int between 1 - 100, try again\n";
+        }
+    }
+
+    //on verifie que c'est un nombre entier
+    while((!is_int($tmp)) || !($tmp<101 && $tmp>0));
     
     //on fait la somme des chiffres de 0 jusqu'au nb
     $sum = (integer) 0;
