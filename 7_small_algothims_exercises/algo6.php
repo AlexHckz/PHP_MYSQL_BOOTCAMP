@@ -5,11 +5,12 @@
 
     do {
         $tmp = readline("Choose a number greater than 1>>"); 
-        if (!is_numeric($tmp) || $tmp <= 1) {
-            echo "Greater than 1, please !! \n";
+        if (!ctype_digit($tmp) || $tmp <= 1) {
+            echo "An integer, greater than 1, please !! \n";
         }
-    } while(!is_numeric($tmp) || $tmp <= 1);
+    } while(!ctype_digit($tmp) || $tmp <= 1);
 
+    $root = sqrt($tmp);
     $multiples = [];
 
     for ($i=2; $i < $tmp ; $i++) { 
