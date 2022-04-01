@@ -15,10 +15,10 @@ $liste_mots = [
 $table_size = sizeof($liste_mots);
 $random_number = rand(0, $table_size);
 
-//on stocke le mot dans une variable 
+//on stocke le mot 
 $random_word = $liste_mots[$random_number];
 
-//on decoupe le mot en lettres dans un tableau
+//on decoupe le mot
 $word_table = str_split($random_word);
 
 //on cree un tableau avec des _
