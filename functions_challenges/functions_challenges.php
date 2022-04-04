@@ -1,16 +1,16 @@
 <?php
 
 //Exo 1 - Compter le nombre de caracteres dans un string 
-
 function compterCaracteres(string $chaineCaractere)
 {
     $nbCaracteres = strlen($chaineCaractere);
-    echo "Le nombre de caracteres est $nbCaracteres";
     return $nbCaracteres;
 }
-compterCaracteres("undeuxtrois");
+echo "Le nombre de caracères de ma chaine est " . compterCaracteres("undeuxtrois");
 
 
+
+//Exo 2 - Mettre en forme une chaine avec la premiere lettre en MAJ
 function miseEnformeChaine(string $chaineCaractere)
 {
     $chaineMinuscule = strtolower($chaineCaractere);
@@ -20,4 +20,4 @@ function miseEnformeChaine(string $chaineCaractere)
     return $miseEnForme;
 }
 
-echo miseEnformeChaine("azetaeztrAAZEAZEAZ123 3333 ,;:");
+echo "Ma chaîne mise en forme retourne " . miseEnformeChaine("TesT DE miSe En FoRMe");
