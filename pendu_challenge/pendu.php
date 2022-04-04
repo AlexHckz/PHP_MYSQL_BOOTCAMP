@@ -1,5 +1,7 @@
 <?php
 
+include './pendu_drawss.php';
+
 //on fait choisir un mot dans une liste à l'ordinateur 
 
 $liste_mots = [
@@ -74,11 +76,12 @@ do {
     if (!$lettre_trouve) {
         echo "P-E-R-D-U !!! La lettre n'est pas dans le mot.\n";
         $essai_perdant++;
+        drawPendu($essai_perdant);
     }
 } while ($essai_restant > 0 && in_array("_ ", $empty_table));
 
 if (in_array("_ ", $empty_table)) {
-    echo "\nLe mot à deviner était $ra ndom_word\n";
+    echo "\nLe mot à deviner était $random_word\n";
     echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
 } else {
     echo "Bravo, tu as gagné la partie.\n";
