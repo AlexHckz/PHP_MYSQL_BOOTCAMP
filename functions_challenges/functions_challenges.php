@@ -6,7 +6,8 @@ function compterCaracteres(string $chaineCaractere)
     $nbCaracteres = strlen($chaineCaractere);
     return $nbCaracteres;
 }
-//echo "Le nombre de caracères de ma chaine est " . compterCaracteres("undeuxtrois");
+
+echo "Le nombre de caracères de ma chaine est " . compterCaracteres("undeuxtrois") . "\n";
 
 
 
@@ -20,7 +21,7 @@ function miseEnformeChaine(string $chaineCaractere)
     return $miseEnForme;
 }
 
-//echo "Ma chaîne mise en forme retourne " . miseEnformeChaine("TesT DE miSe En FoRMe");
+echo "Ma chaîne mise en forme retourne " . miseEnformeChaine("TesT DE miSe En FoRMe") . "\n";
 
 //Exo 3 - Fonction Touché Coulé 
 
@@ -46,4 +47,15 @@ function toucheCoule(string $coordX, string $coordY)
     }
 }
 
-echo toucheCoule("Z", 35);
+echo toucheCoule("Z", 35) . "\n";
+
+
+//Exo 4 - Fonction ajout de valeur au debut de tableau
+
+function arrayUnshift($inputArray, $valueToAdd)
+{
+    array_unshift($inputArray, $valueToAdd);
+    return $inputArray;
+}
+
+print_r(arrayUnshift([3, 4, 5], 2));
