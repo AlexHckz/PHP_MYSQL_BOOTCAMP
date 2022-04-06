@@ -8,10 +8,25 @@
     <title>Document</title>
 
     <style>
+        header {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
         .main_top {
             display: flex;
             justify-content: space-between;
             background-color: rgb(146, 221, 231);
+        }
+
+        .main-bottom {
+            display: flex;
+        }
+
+        .main-bottom>* {
+            flex-basis: 50%;
         }
 
         .main_right {
@@ -23,6 +38,12 @@
             flex-direction: column;
             background-color: rgba(255, 0, 0, 0.41);
         }
+
+        footer {
+            background-color: beige;
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
 </head>
 
@@ -30,8 +51,8 @@
     <header>
         <div>
             <p>Looking to hire ...</p>
-            <button>Hire creators</button>
         </div>
+        <button>Hire creators</button>
         <div>
             <img alt="logo de Google" />
         </div>
@@ -44,7 +65,7 @@
                 <button>Sign in</button>
             </div>
         </div>
-        <div>
+        <div class="main-bottom">
             <div class="main_left">
                 <h1>Get your game discovered</h1>
                 <h2>Publishers and Developers</h2>
@@ -61,6 +82,13 @@
             </div>
         </div>
     </main>
+    <footer>
+        <img alt="logo1" />
+        <img alt="logo2" />
+        <img alt="logo3" />
+        <img alt="logo4" />
+        <img alt="logo5" />
+    </footer>
 </body>
 
 </html>
