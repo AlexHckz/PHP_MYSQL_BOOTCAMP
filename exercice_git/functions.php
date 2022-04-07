@@ -1,6 +1,4 @@
 <?php
-
-
 function nbEntier()
 {
     do {
@@ -13,5 +11,4 @@ function nbEntier()
         return $tmp;
     }
 }
-
 echo nbEntier();
