@@ -1,6 +1,6 @@
 <?php
 
-
+//===========================
 function nbEntier()
 {
     do {
@@ -10,12 +10,13 @@ function nbEntier()
     if ($tmp <= 1) {
         return 1;
     } else {
+        factorielle($tmp);
         return $tmp;
     }
 }
 
 echo nbEntier();
-//gmp_fact — Factorielle GMP
+//gmp_fact — Factorielle GMP"
 
 //Calcule la factorielle (num!) de num.
 function factorielle($fact)
@@ -23,3 +24,5 @@ function factorielle($fact)
     $fact = gmp_fact($fact);
     return $fact;
 }
+echo "bonjour";
+echo "deuxieme test";
