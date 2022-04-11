@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Acme';
+    src: url(https://fonts.googleapis.com/css2?family=Acme&display=swap);
+}
+
+
+body {
+    font-family: Acme;
+}
+header {
+            font-size: 1.5em;
+            padding: 60px;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    background-color: indianred;
+}
+
+footer {
+    display: flex;
+    background-color: indianred;
+    justify-content: space-around;
+}
+
+nav a,
+footer a {
+    text-decoration: none;
+    padding: 12px 20px;
+    color: white;
+    font-weight: 600;
+}
+
+nav a:hover,
+footer a:hover {
+    background-color: bisque;
+    color: black;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    flex: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.middle-section {
+    flex: 70%;
+    padding: 20px;
+}
+
+.article-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-bottom-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.article-bottom-wrapper > * {
+    flex: 50%;
+}
+
+.fakeImg {
+    display: flex;
+    width: 350px;
+    height: auto;
+}
+
+.wrapperTechnos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.technos {
+    width: 36px;
+    padding: 24px;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+hr {
+    margin: 80px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    .fakeImg {
+        width: 150px;
+    }
+
+}
