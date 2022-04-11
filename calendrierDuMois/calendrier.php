@@ -1,4 +1,7 @@
 <?php
 
+
 $monthDays = date('t');
-echo "Le mois de " . date("F Y", $mois) . " possède " . date("t", $mois) . " jours";
+// echo "Le mois de " . date("F Y", $mois) . " possède " . date("t", $mois) . " jours";
+
+include './index.html';
