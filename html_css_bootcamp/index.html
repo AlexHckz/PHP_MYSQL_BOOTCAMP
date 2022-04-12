@@ -12,35 +12,31 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
 
 
-    <style>
-
-    </style>
 </head>
 
 <body>
 
     <header>
-        <h1>ALEX - PAGE CV</h1>
+        <h1 class="title_font">Alex C.</h1>
         <p>DEVELOPPEUR <b>FULLSTACK</b> JR.</p>
     </header>
 
     <nav>
-        <a href="">Lien</a>
-        <a href="">Lien</a>
-        <a href="">Lien</a>
-        <a href="">Lien</a>
+        <a id="button_experience" onclick="togg">Expériences Professionnelles</a>
+        <a id="button_formation" onclick="togg">Formation</a>
+        <a href="" id=" button_portfolio">Portfolio</a>
+        <a href="" id="button_contact">Contact</a>
     </nav>
 
     <main>
         <aside>
 
             <!-- intro -->
-            <h2>Hello World</h2>
-            <p>Je suis dev' fullstack
-                PHP & Javascript, et je cherche un
+            <h2 class="title_font">En bref</h2>
+            <p>Je suis dev' fullstack avec 1 an d'expérience, et je cherche un
                 stage pour Juin 2022</p>
             <div class="fakeImg">Une image ...</div>
 
@@ -50,52 +46,94 @@
                 <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\html5.svg" class="technos">
                 <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\css3-alt.svg" class="technos">
                 <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\js.svg" class="technos">
+                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\vuejs.svg" class="technos">
+                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\github.svg" class="technos">
+                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\wordpress.svg" class="technos">
+                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\bootstrap.svg" class="technos">
                 <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\php.svg" class="technos">
                 <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\laravel.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\github.svg" class="technos">
             </div>
 
         </aside>
 
         <section class="middle-section">
-            <h2>Expériences Pro'</h2>
 
-            <article>
-                <div class="article-top-wrapper">
-                    <h3>Intégrateur Web</h3>
-                    <p>@Momindum</p>
-                </div>
+            <div id="experience">
+                <h2 class="title_font">Expériences Professionnelles</h2>
+                <article>
+                    <div class="article-top-wrapper">
+                        <h3>Intégrateur Web</h3>
+                        <p>@Momindum</p>
+                    </div>
 
-                <div class="article-bottom-wrapper">
-                    <img src="./img/OrgCoral_Ofc-01_Concept-06.jpg" class="fakeImg"></img>
-                    <ul>
-                        <li>Intégration HTML/CSS, from scratch & CMS</li>
-                        <li>Animations CSS & JS</li>
-                        <li>Responsive design & compatibilité browser</li>
-                        <li>Création supports marketing</li>
-                    </ul>
-                </div>
-            </article>
+                    <div class="article-bottom-wrapper">
+                        <img src="./img/OrgCoral_Ofc-01_Concept-06.jpg" class="fakeImg"></img>
+                        <ul>
+                            <li>Intégration HTML/CSS, from scratch & CMS</li>
+                            <li>Animations CSS & JS</li>
+                            <li>Responsive design & compatibilité browser</li>
+                            <li>Création supports marketing</li>
+                        </ul>
+                    </div>
+                </article>
 
-            <hr>
+                <hr>
 
-            <article>
-                <div class="article-top-wrapper">
-                    <h3>Community manager</h3>
-                    <p>@Orange</p>
-                </div>
+                <article>
+                    <div class="article-top-wrapper">
+                        <h3>Community manager</h3>
+                        <p>@Orange</p>
+                    </div>
 
-                <div class="article-bottom-wrapper">
-                    <img src="./img/Wavy_Bus-22_Single-05.jpg" class="fakeImg"></img>
-                    <ul>
-                        <li>Community Management</li>
-                        <li>Formation des utilisateurs</li>
-                        <li>Organisation de webinaires</li>
-                        <li>Rédaction de la documentation</li>
-                    </ul>
-                </div>
-            </article>
+                    <div class="article-bottom-wrapper">
+                        <img src="./img/Wavy_Bus-22_Single-05.jpg" class="fakeImg"></img>
+                        <ul>
+                            <li>Community Management</li>
+                            <li>Formation des utilisateurs</li>
+                            <li>Organisation de webinaires</li>
+                            <li>Rédaction de la documentation</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
 
+            <div id="formation">
+                <h2 class="title_font">Formation</h2>
+                <article>
+                    <div class="article-top-wrapper">
+                        <h3>Developpement Web</h3>
+                        <p>@OPENCLASSROOM, ICS</p>
+                    </div>
+
+                    <div class="article-bottom-wrapper">
+                        <img src="./img/20944119.jpg" class="fakeImg"></img>
+                        <ul>
+                            <li>Intégration HTML/CSS/JS</li>
+                            <li>Programmation PHP</li>
+                            <li>Bases de données & requêtes CRUD</li>
+                            <li>SEO, frameworks Front-end</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <hr>
+
+                <article>
+                    <div class="article-top-wrapper">
+                        <h3>Master métiers du web</h3>
+                        <p>@UPEM</p>
+                    </div>
+
+                    <div class="article-bottom-wrapper">
+                        <img src="./img/20944387.jpg" class="fakeImg"></img>
+                        <ul>
+                            <li>Graphisme, PAO, montage vidéo</li>
+                            <li>Gestion de projet & communication</li>
+                            <li>UX design</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
 
         </section>
     </main>
@@ -107,6 +145,8 @@
         <a href="">Lien</a>
         <a href="">Lien</a>
     </footer>
+
+    <script src="./style/style.js"></script>
 
 </body>
 

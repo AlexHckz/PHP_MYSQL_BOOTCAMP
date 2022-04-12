@@ -1,19 +1,26 @@
-@font-face {
-    font-family: 'Acme';
-    src: url(https://fonts.googleapis.com/css2?family=Acme&display=swap);
-}
+/* @font-face {
+    font-family: 'Work-Sans';
+    src: url(https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300);
+} */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300');
 
 body {
-    font-family: Acme;
+    font-weight: 300;
+    font-family: Work Sans;
+    margin: 0;
+    background-color: #fff;
+}
+.title_font {
+    font-family: Montserrat;
 }
 header {
-            font-size: 1.5em;
-            padding: 60px;
-            text-align: center;
-            background-color: cornflowerblue;
-            color: white;
-        }
+    font-size: 1.5em;
+    padding: 60px;
+    text-align: center;
+    background-color: #91b3fa; 
+    color: white;
+}
 
 header p {
     font-size: 1.2rem;
@@ -21,12 +28,13 @@ header p {
 
 nav {
     display: flex;
-    background-color: indianred;
+    background-color: #FC9086;
+    border: solid #FC9086 1px;
 }
 
 footer {
     display: flex;
-    background-color: indianred;
+    /* background-color: indianred; */
     justify-content: space-around;
 }
 
@@ -77,6 +85,7 @@ aside {
     display: flex;
     width: 350px;
     height: auto;
+    
 }
 
 .wrapperTechnos {
@@ -98,8 +107,18 @@ hr {
 }
 
 
+/* SHOW HIDE DU CONTENU */
 
-@media screen and (max-width: 800px) {
+#experience {
+    display: block;
+}
+/* #formation {
+    display: none;
+} */
+
+/* MEDIA QUERIES */
+
+/* @media screen and (max-width: 800px) {
     main {
         flex-direction: column;
     }
@@ -107,4 +126,4 @@ hr {
         width: 150px;
     }
 
-}
+} */
