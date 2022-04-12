@@ -1,0 +1,69 @@
+/* Componenent CSS*/
+
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* General styles and layout */
+
+
+.double_line_divider {
+  position: relative;
+  text-align: center;
+}
+
+.container {
+  overflow: hidden;
+  /* we don't want the pseudo-elements sticking out */
+}
+
+/* section.color h2 {
+  color: #fff;
+} */
+
+/* .color {
+  background: #3498db;
+} */
+
+.double_line_divider::before,
+.double_line_divider::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+/* Double Line */
+
+.ss-style-doublediagonal {
+  z-index: 1;
+  padding-top: 6em;
+  background: #F9F9F9;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+    top: 0px;
+    left: 0%;
+    z-index: -1;
+    width: 100%;
+    height: 75%;
+    background: inherit;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+    height: 50%;
+    background: #813671;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-4deg);
+    -webkit-transform-origin: 3% 0;
+    transform-origin: -5% 0%;
+}

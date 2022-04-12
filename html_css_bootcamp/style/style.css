@@ -1,8 +1,3 @@
-/* @font-face {
-    font-family: 'Work-Sans';
-    src: url(https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300);
-} */
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300');
 
 body {
@@ -12,6 +7,7 @@ body {
     background-color: #fff;
 }
 .title_font {
+    text-align: center;
     font-family: Montserrat;
 }
 header {
@@ -28,8 +24,10 @@ header p {
 
 nav {
     display: flex;
+    justify-content: space-evenly;
     background-color: #FC9086;
     border: solid #FC9086 1px;
+    box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 40%);
 }
 
 footer {
@@ -40,6 +38,7 @@ footer {
 
 nav a,
 footer a {
+    cursor: pointer;
     text-decoration: none;
     padding: 12px 20px;
     color: white;
@@ -56,25 +55,25 @@ main {
     display: flex;
 }
 
+
 aside {
-    flex: 30%;
-    background-color: #f9f9f9;
-    padding: 20px;
+    flex: 0 1 20%;
+    background: #F9F9F9;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    z-index: -1;
 }
 
 .middle-section {
-    flex: 70%;
-    padding: 20px;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    /* margin: 0 3rem; */
 }
-
-.article-top-wrapper {
+article {
     display: flex;
-    justify-content: space-between;
-}
-
-.article-bottom-wrapper {
-    display: flex;
+    flex-grow: 1;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .article-bottom-wrapper > * {
@@ -98,23 +97,31 @@ aside {
     padding: 24px;
 }
 
+h2 {
+    padding: 2rem;
+    margin: 0;
+}
+
 h3 {
     font-size: 1em;
 }
 
 hr {
-    margin: 80px;
+    margin: 3em;
 }
 
+.grey_background {
+    background-color: #F9F9F9;
+}
 
 /* SHOW HIDE DU CONTENU */
 
 #experience {
     display: block;
 }
-/* #formation {
-    display: none;
-} */
+#formation {
+    background-color: #f9f9f9;
+}
 
 /* MEDIA QUERIES */
 

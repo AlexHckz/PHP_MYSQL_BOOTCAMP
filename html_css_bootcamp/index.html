@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
-
+    <link rel="stylesheet" href="./style/double_line_divider.css">
 
 </head>
 
@@ -21,12 +21,12 @@
 
     <header>
         <h1 class="title_font">Alex C.</h1>
-        <p>DEVELOPPEUR <b>FULLSTACK</b> JR.</p>
+        <p>DEVELOPPEUR <b>FULLSTACK</b> JUNIOR</p>
     </header>
 
     <nav>
-        <a id="button_experience" onclick="togg">Expériences Professionnelles</a>
-        <a id="button_formation" onclick="togg">Formation</a>
+        <a id="button_experience">Expériences Professionnelles</a>
+        <a id="button_formation">Formation</a>
         <a href="" id=" button_portfolio">Portfolio</a>
         <a href="" id="button_contact">Contact</a>
     </nav>
@@ -38,7 +38,6 @@
             <h2 class="title_font">En bref</h2>
             <p>Je suis dev' fullstack avec 1 an d'expérience, et je cherche un
                 stage pour Juin 2022</p>
-            <div class="fakeImg">Une image ...</div>
 
             <!-- technos -->
             <h3>J'utilise</h3>
@@ -58,16 +57,17 @@
 
         <section class="middle-section">
 
-            <div id="experience">
+            <div class="" id="experience">
+
                 <h2 class="title_font">Expériences Professionnelles</h2>
+
                 <article>
-                    <div class="article-top-wrapper">
+                    <div class="article-left-wrapper">
+                        <img src="./img/OrgCoral_Ofc-01_Concept-06.jpg" class="fakeImg"></img>
+                    </div>
+                    <div class="article-right-wrapper">
                         <h3>Intégrateur Web</h3>
                         <p>@Momindum</p>
-                    </div>
-
-                    <div class="article-bottom-wrapper">
-                        <img src="./img/OrgCoral_Ofc-01_Concept-06.jpg" class="fakeImg"></img>
                         <ul>
                             <li>Intégration HTML/CSS, from scratch & CMS</li>
                             <li>Animations CSS & JS</li>
@@ -80,13 +80,9 @@
                 <hr>
 
                 <article>
-                    <div class="article-top-wrapper">
+                    <div class="article-left-wrapper">
                         <h3>Community manager</h3>
                         <p>@Orange</p>
-                    </div>
-
-                    <div class="article-bottom-wrapper">
-                        <img src="./img/Wavy_Bus-22_Single-05.jpg" class="fakeImg"></img>
                         <ul>
                             <li>Community Management</li>
                             <li>Formation des utilisateurs</li>
@@ -94,19 +90,31 @@
                             <li>Rédaction de la documentation</li>
                         </ul>
                     </div>
+
+                    <div class="article-right-wrapper">
+                        <img src="./img/Wavy_Bus-22_Single-05.jpg" class="fakeImg"></img>
+                    </div>
                 </article>
+
             </div>
 
+            <section class="col-3 ss-style-doublediagonal double_line_divider">
+                <div class="column">
+                </div>
+            </section>
+
             <div id="formation">
-                <h2 class="title_font">Formation</h2>
+
+                <h2 class="title_font grey_background">Formation</h2>
+
                 <article>
-                    <div class="article-top-wrapper">
-                        <h3>Developpement Web</h3>
-                        <p>@OPENCLASSROOM, ICS</p>
+                    <div class="article-left-wrapper">
+                        <img src="./img/20944119.jpg" class="fakeImg"></img>
                     </div>
 
-                    <div class="article-bottom-wrapper">
-                        <img src="./img/20944119.jpg" class="fakeImg"></img>
+                    <div class="article-right-wrapper">
+                        <h3>Developpement Web</h3>
+                        <p>@OPENCLASSROOM, ICS</p>
                         <ul>
                             <li>Intégration HTML/CSS/JS</li>
                             <li>Programmation PHP</li>
@@ -116,23 +124,22 @@
                     </div>
                 </article>
 
-                <hr>
-
                 <article>
-                    <div class="article-top-wrapper">
+                    <div class="article-left-wrapper">
                         <h3>Master métiers du web</h3>
                         <p>@UPEM</p>
-                    </div>
-
-                    <div class="article-bottom-wrapper">
-                        <img src="./img/20944387.jpg" class="fakeImg"></img>
                         <ul>
                             <li>Graphisme, PAO, montage vidéo</li>
                             <li>Gestion de projet & communication</li>
                             <li>UX design</li>
                         </ul>
                     </div>
+
+                    <div class="article-right-wrapper">
+                        <img src="./img/20944387.jpg" class="fakeImg"></img>
+                    </div>
                 </article>
+
             </div>
 
         </section>
@@ -146,7 +153,7 @@
         <a href="">Lien</a>
     </footer>
 
-    <script src="./style/style.js"></script>
+    <!-- <script src="./style/style.js"></script> -->
 
 </body>
 
