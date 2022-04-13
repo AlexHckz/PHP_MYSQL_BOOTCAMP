@@ -41,7 +41,7 @@
 
 .ss-style-doublediagonal {
   z-index: 1;
-  padding-top: 6em;
+  padding-top: 3.5em;
   background: #F9F9F9;
 }
 
@@ -56,14 +56,17 @@
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
     -webkit-transform-origin: 0 0;
+    width: calc(100% - 1px);
     transform-origin: 0 0;
+    border: solid #f9f9f9 1px;
+    border-top: none;
 }
 
 .ss-style-doublediagonal::before {
     height: 50%;
     background: #813671;
     -webkit-transform: rotate(-3deg);
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
     -webkit-transform-origin: 3% 0;
-    transform-origin: -5% 0%;
+    transform-origin: -1% 0%;
 }

@@ -6,10 +6,9 @@ body {
     margin: 0;
     background-color: #fff;
 }
-.title_font {
-    text-align: center;
-    font-family: Montserrat;
-}
+
+/* header et nav */
+
 header {
     font-size: 1.5em;
     padding: 60px;
@@ -22,22 +21,22 @@ header p {
     font-size: 1.2rem;
 }
 
-nav {
+nav, footer {
     display: flex;
     justify-content: space-evenly;
     background-color: #FC9086;
-    border: solid #FC9086 1px;
-    box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 40%);
+  }
+  
+nav {
+  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 40%);
 }
-
 footer {
-    display: flex;
-    /* background-color: indianred; */
-    justify-content: space-around;
+  box-shadow: 0px -3px 5px 0px rgb(0 0 0 / 40%);
 }
 
 nav a,
 footer a {
+    text-align: center;
     cursor: pointer;
     text-decoration: none;
     padding: 12px 20px;
@@ -45,35 +44,143 @@ footer a {
     font-weight: 600;
 }
 
-nav a:hover,
-footer a:hover {
-    background-color: bisque;
-    color: black;
+
+/* button style */
+
+:active, :hover, :focus {
+  outline: 0!important;
+  outline-offset: 0;
 }
+::before,
+::after {
+  position: absolute;
+  content: "";
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: #d989e052;
+  border: none;
+  cursor: pointer;
+  /* margin: 0px 25px 15px; */
+  padding: 0;
+  min-width: 150px;
+}
+
+.btn span {         
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    padding: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+  }
+
+/*--- btn-1 ---*/
+.btn-1::before {
+  background-color: rgb(254 165 159);
+  transition: 0.3s ease-out;
+}
+.btn-1 span {
+  color: rgb(255,255,255);
+  border: 1px solid rgb(254 165 159);
+  transition: 0.2s 0.1s;
+}
+.btn-1 span:hover {
+  background-color: #d989e052;
+  transition: 0.2s 0.1s;
+}
+
+/* 1.hover-filled-slide-down */
+.btn.hover-filled-slide-down::before {
+  bottom: 0; left: 0; right: 0; 
+  height: 100%; width: 100%;
+}
+.btn.hover-filled-slide-down:hover::before {
+  height: 0%;
+}
+
+/* 2.hover-filled-slide-up */
+.btn.hover-filled-slide-up::before {
+  top: 0; left: 0; right: 0;
+  height: 100%; width: 100%;
+}
+.btn.hover-filled-slide-up:hover::before {
+  height: 0%;
+}
+
+/* 5. hover-filled-opacity */
+.btn.hover-filled-opacity::before {
+  top:0; bottom: 0; right: 0;
+  height: 100%; width: 100%;
+  opacity: 1;
+}
+.btn.hover-filled-opacity:hover::before {
+  opacity: 0;
+}
+
 
 main {
     display: flex;
 }
 
-
+ul.list1 {
+    list-style-type: oriya;
+}
+ul.list2 {
+    list-style-type: bengali;
+}
 aside {
-    flex: 0 1 20%;
+    flex: 0 1 27%;
     background: #F9F9F9;
     box-sizing: border-box;
     padding: 0 3rem;
     z-index: -1;
 }
 
+aside p {
+    text-align: center;
+    line-height: 3em;
+}
+
+.wrapperTechnos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.technos {
+    width: 36px;
+    height: auto;
+    margin-top: 4em;
+}
+
+/* main section */
+
 .middle-section {
     flex: 1 1 auto;
     box-sizing: border-box;
-    /* margin: 0 3rem; */
+    z-index: -1;
+}
+.middle-section div article:last-child {
+    margin-bottom: 0;
+    padding-bottom: 7rem;
 }
 article {
     display: flex;
     flex-grow: 1;
     align-items: center;
     justify-content: space-evenly;
+    margin: 7rem 0;
+    padding: 0 3rem;
 }
 
 .article-bottom-wrapper > * {
@@ -87,19 +194,10 @@ article {
     
 }
 
-.wrapperTechnos {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.technos {
-    width: 36px;
-    padding: 24px;
-}
-
 h2 {
-    padding: 2rem;
     margin: 0;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
 }
 
 h3 {
@@ -114,13 +212,24 @@ hr {
     background-color: #F9F9F9;
 }
 
-/* SHOW HIDE DU CONTENU */
+/* spécifique par section */
 
 #experience {
     display: block;
+    padding-bottom: 4em;
+}
+#experience article:last-child {
+   margin-bottom: -3em;
 }
 #formation {
     background-color: #f9f9f9;
+}
+#formation h2 {
+    margin-top: 0;
+}
+.title_font {
+    text-align: center;
+    font-family: Montserrat;
 }
 
 /* MEDIA QUERIES */
