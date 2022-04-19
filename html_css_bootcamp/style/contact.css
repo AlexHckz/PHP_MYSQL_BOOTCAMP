@@ -1,6 +1,12 @@
 form {
-    margin: 7rem 0;
+    margin: 5rem 0;
     padding: 0 3rem;
+}
+.form-check-input {
+    margin-top: 0.95em;
+}
+label {
+    padding: 0.8rem 0;
 }
 .contact_wrapper_technos {
     display: flex;
@@ -8,4 +14,13 @@ form {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin: 2rem 0;
+}
+.contact_wrapper_technos .technos{
+    width: 36px;
+    height: auto;
+    margin: 1rem;
+}
+.heart {
+    margin-left: 0.3rem;
 }

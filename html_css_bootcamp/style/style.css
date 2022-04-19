@@ -24,13 +24,21 @@ header p {
 main {
     display: flex;
 }
-
-ul.list1 {
+main ul {
+    list-style-image: url("../src/fontawesome-free-6.1.1-desktop/svgs/solid/check.svg");
+    list-style-position: outside;
+    /* list-style-type: circle;
+    list-style-image: linear-gradient(to left top, #FC9086, #91b3fa); */
+}
+main ul li {
+    padding-left: 1em;
+}
+/* ul.list1 {
     list-style-type: oriya;
 }
 ul.list2 {
     list-style-type: bengali;
-}
+} */
 aside {
     flex: 0 1 27%;
     background: #F9F9F9;
@@ -41,6 +49,12 @@ aside {
 aside p {
     text-align: center;
     line-height: 3em;
+    font-size: 17px;
+}
+aside p {
+    text-align: center;
+    line-height: 3em;
+    font-size: 18px;
 }
 
 .home_wrapper_technos {
@@ -48,18 +62,24 @@ aside p {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    margin: 2rem 0;
 }
 
-.technos {
+.home_wrapper_technos .technos {
     width: 36px;
     height: auto;
     margin-top: 4em;
+}
+.heart {
+    width: 24px;
+    margin-left: 0.3rem;
 }
 
 /* main section */
 
 .middle-section {
-    flex: 1 1 auto;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 .middle-section div article:last-child {
