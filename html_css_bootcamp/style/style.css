@@ -43,7 +43,7 @@ aside p {
     line-height: 3em;
 }
 
-.wrapperTechnos {
+.home_wrapper_technos {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -124,7 +124,11 @@ hr {
     font-family: Montserrat;
 }
 
-
+/* boostrap overides */
+.btn-primary {
+  background-color: #91b3fa;
+  border-color: #91b3fa;
+}
 /* carousel */
 .carousel_wrapper {
   padding-bottom: 10em;

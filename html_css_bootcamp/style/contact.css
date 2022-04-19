@@ -2,3 +2,10 @@ form {
     margin: 7rem 0;
     padding: 0 3rem;
 }
+.contact_wrapper_technos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
