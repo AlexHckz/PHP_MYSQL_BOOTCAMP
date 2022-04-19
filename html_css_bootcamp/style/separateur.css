@@ -42,7 +42,6 @@
 .ss-style-doublediagonal {
   z-index: 1;
   padding-top: 3.5em;
-  background: #F9F9F9;
 }
 
 .ss-style-doublediagonal::before,
