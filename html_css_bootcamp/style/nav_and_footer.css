@@ -2,15 +2,16 @@
 
 nav, footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     background-color: #FC9086;
 }
 nav {
   position: relative;
   z-index: 2;
-  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 40%);
+  box-shadow: 0px 3px 3px 0px rgb(0 0 0 / 40%);
 }
 footer {
+  align-items: center;
   position: relative;
   z-index: 2;
   box-shadow: 0px -3px 5px 0px rgb(0 0 0 / 40%);
@@ -58,8 +59,8 @@ footer {
   color: white;
 }
 footer div {
+  text-align: center;
   padding: 2rem 1rem;
-  flex: 0 1 250px;
 }
 footer h3 {
   margin-bottom: 1rem;
@@ -108,7 +109,7 @@ footer div.networks {
 }
 .btn-1 span {
   color: rgb(255,255,255);
-  border: 1px solid rgb(254 165 159);
+  border: 1px solid rgb(208 167 164);
   transition: 0.2s 0.1s;
 }
 .btn-1 span:hover {
@@ -142,4 +143,20 @@ footer div.networks {
 }
 .btn.hover-filled-opacity:hover::before {
   opacity: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  nav, footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  footer div {
+    text-align: left;
+    padding: 2rem 1rem;
+    flex: 0 1 250px;
+  }
+  .btn-1 span {
+  border: 1px solid rgb(254 165 159);
+  }
 }
