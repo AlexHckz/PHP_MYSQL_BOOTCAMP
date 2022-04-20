@@ -43,56 +43,59 @@
         </a>
     </nav>
 
-    <main>
-        <aside>
+    <main class="container-fluid">
+        <div class="row">
+            <aside class="col-3">
+                <!-- intro -->
+                <h2 class="title_font">En bref</h2>
+                <p>Web-design front/back<br>
+                    <strong>I <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\solid\heart.svg"
+                            class="heart"></strong>
+                </p>
 
-            <!-- intro -->
-            <h2 class="title_font">En bref</h2>
-            <p>Web-design front/back<br>
-                <strong>I <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\solid\heart.svg" class="heart"></strong>
-            </p>
+                <!-- technos -->
+                <div class="contact_wrapper_technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\html5.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\css3-alt.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\js.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\vuejs.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\github.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\wordpress.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\bootstrap.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\php.svg" class="technos">
+                    <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\laravel.svg" class="technos">
+                </div>
 
-            <!-- technos -->
-            <div class="contact_wrapper_technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\html5.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\css3-alt.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\js.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\vuejs.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\github.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\wordpress.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\bootstrap.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\php.svg" class="technos">
-                <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\laravel.svg" class="technos">
-            </div>
+            </aside>
 
-        </aside>
+            <section class="col-9 middle-section">
 
-        <section class="container middle-section">
+                <div id="contact">
 
-            <div id="contact">
+                    <h2 class="title_font">Me contacter</h2>
 
-                <h2 class="title_font">Me contacter</h2>
-
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </section>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>

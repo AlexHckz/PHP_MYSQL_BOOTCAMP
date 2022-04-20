@@ -73,6 +73,35 @@ footer ul {
 footer ul a {
   margin: 0;
   padding: 0;
+  position: relative;
+}
+footer .networks li a:after {
+  content: '';
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 16px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  z-index: -1;
+}
+footer .networks li .linkedin:after {
+  border-radius: 3px;
+}
+
+footer .networks li a:focus:after, footer .networks li a:hover:after {
+  opacity: 1;
+  -webkit-transform: translate(-50%,-50%) scale(1.2);
+  transform: translate(-50%,-50%) scale(1.2);
 }
 
 footer div.networks {
