@@ -4,6 +4,9 @@ include './pendu_drawss.php';
 
 //on fait choisir un mot dans une liste à l'ordinateur 
 
+var_dump($_POST);
+
+
 $liste_mots = [
     "Blanc", "Podium", "Attirer", "Cablage", "Capitaine", "Nuage", "Ovni", "Humide", "Femmes",
     "Tremble", "Canal", "Menottes", "Artificiel", "Madone", "Bazooka", "Pression", "Multiplication", "Prix", "Plastique",
@@ -15,74 +18,101 @@ $liste_mots = [
 ];
 
 $table_size = sizeof($liste_mots);
-$random_number = rand(0, $table_size);
+
+if (empty($random_number)) {
+    $random_number = rand(0, $table_size);
+}
+
+echo "\n";
+var_dump($random_number);
+
 
 //on stocke le mot 
-$random_word = $liste_mots[$random_number];
+
+if (!empty($_POST["data_word"]) && !empty($_POST["data_try"])) {
+    $random_word = $_POST["data_word"];
+    $essai_restant = $_POST["data_try"];
+} else {
+    $random_word = $liste_mots[$random_number];
+    $essai_restant = 9;
+}
+
+
+echo "\n";
+var_dump($random_word);
 
 //on decoupe le mot
 $word_table = str_split($random_word);
 
-//on cree un tableau avec des _
+//on cree un tableau avec des _ et on les concatene dans un mot
 $word_size = strlen($random_word);
 $empty_table = [];
+$motCache = "";
 
-echo "\n trouve le mot suivant => ";
 for ($i = 0; $i < $word_size; $i++) {
     array_push($empty_table, "_ ");
-    echo $empty_table[$i];
+    $motCache .= $empty_table[$i];
 }
+
+
+//on definit le nombre d'essai max
+$lettre_trouve = false;
+$win = null;
+$loose = null;
+
+//on demande a l'utilisateur de choisir une lettre 
+
+// do {
+//     $user_entry = readline("Choisis une lettre >>");
+//     $user_choice = strtolower($user_entry);
+//     if (!ctype_alpha($user_entry)) {
+//         echo "Seules les lettres sont acceptées.\n";
+//     }
+// } while (!ctype_alpha($user_entry));
+
+if (isset($_POST["user_entry"])) {
+
+    $user_choice = $_POST["user_entry"];
+
+    if (!ctype_alpha($_POST["user_entry"])) {
+        echo "Seules les lettres sont acceptées.\n";
+    } else {
+        //on compare la lettre avec le tableau de mot 
+        for ($i = 0; $i < sizeof($word_table); $i++) {
+            if ($user_choice == strtolower($word_table[$i])) {
+                $empty_table[$i] = $user_choice;
+                $lettre_trouve = true;
+            }
+        }
+
+        if ($lettre_trouve) {
+            $win = true;
+        }
+
+        if (!$lettre_trouve) {
+            $loose = true;
+            $essai_restant--;
+            drawPendu($essai_restant);
+        }
+    }
+}
+
+
+
+
 //print_r($empty_table);
 
-$essai_perdant = 0;
+// echo "\n trouve le mot suivant => ";
+// foreach ($empty_table as $element) {
+//     echo $element;
+// }
 
-do {
 
-    echo "\n\n######################\n";
-    //on definit le nombre d'essai max
-    $essai_restant = 9 - $essai_perdant;
-    echo "Il te reste $essai_restant essais !\n";
-    $lettre_trouve = false;
 
-    //on demande a l'utilisateur de choisir une lettre 
-    do {
-        $user_entry = readline("Choisis une lettre >>");
-        $user_choice = strtolower($user_entry);
-        if (!ctype_alpha($user_entry)) {
-            echo "Seules les lettres sont acceptées.\n";
-        }
-    } while (!ctype_alpha($user_entry));
 
-    //on compare la lettre avec le tableau de mot 
-
-    for ($i = 0; $i < sizeof($word_table); $i++) {
-        if ($user_choice == strtolower($word_table[$i])) {
-            $empty_table[$i] = $user_choice;
-            $lettre_trouve = true;
-        }
-    }
-
-    //print_r($empty_table);
-    echo "\n trouve le mot suivant => ";
-    foreach ($empty_table as $element) {
-        echo $element;
-    }
-    echo "\n";
-
-    if ($lettre_trouve) {
-        echo "G-A-G-N-E !!! Le mot contient la lettre.\n";
-    }
-
-    if (!$lettre_trouve) {
-        echo "P-E-R-D-U !!! La lettre n'est pas dans le mot.\n";
-        $essai_perdant++;
-        drawPendu($essai_perdant);
-    }
-} while ($essai_restant > 0 && in_array("_ ", $empty_table));
-
-if (in_array("_ ", $empty_table)) {
-    echo "\nLe mot à deviner était $random_word\n";
-    echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
-} else {
-    echo "Bravo, tu as gagné la partie.\n";
-}
+// if (in_array("_ ", $empty_table)) {
+//     echo "\nLe mot à deviner était $random_word\n";
+//     echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
+// } else {
+//     echo "Bravo, tu as gagné la partie.\n";
+// }
