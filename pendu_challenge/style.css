@@ -1,0 +1,9 @@
+html {
+   height: 100%;
+   width: 100%;
+}
+
+.h2, h2 {
+    font-size: calc(1.025rem + .9vw);
+}
+

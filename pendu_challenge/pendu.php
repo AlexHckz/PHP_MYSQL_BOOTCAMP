@@ -4,7 +4,6 @@ include './pendu_drawss.php';
 
 //on fait choisir un mot dans une liste à l'ordinateur 
 
-var_dump($_POST);
 
 
 $liste_mots = [
@@ -23,8 +22,6 @@ if (empty($random_number)) {
     $random_number = rand(0, $table_size);
 }
 
-echo "\n";
-var_dump($random_number);
 
 
 //on stocke le mot 
@@ -38,20 +35,32 @@ if (!empty($_POST["data_word"]) && !empty($_POST["data_try"])) {
 }
 
 
-echo "\n";
-var_dump($random_word);
-
 //on decoupe le mot
 $word_table = str_split($random_word);
 
 //on cree un tableau avec des _ et on les concatene dans un mot
 $word_size = strlen($random_word);
 $empty_table = [];
-$motCache = "";
 
-for ($i = 0; $i < $word_size; $i++) {
-    array_push($empty_table, "_ ");
-    $motCache .= $empty_table[$i];
+if (empty($_POST["data_answer"])) {
+    $motCache = "";
+} else {
+    $motCache = $_POST["data_answer"];
+}
+
+if (empty($_POST["data_table"])) {
+    for ($i = 0; $i < $word_size; $i++) {
+        array_push($empty_table, "_");
+        $motCache .= $empty_table[$i];
+    }
+} else {
+    $empty_table = explode(" ", $_POST["data_table"]);
+}
+
+if (empty($_POST["data_printed"])) {
+    $printed = null;
+} else {
+    $printed = $_POST["data_printed"];
 }
 
 
@@ -59,6 +68,7 @@ for ($i = 0; $i < $word_size; $i++) {
 $lettre_trouve = false;
 $win = null;
 $loose = null;
+
 
 //on demande a l'utilisateur de choisir une lettre 
 
@@ -87,6 +97,7 @@ if (isset($_POST["user_entry"])) {
 
         if ($lettre_trouve) {
             $win = true;
+            $motCache = implode($empty_table);
         }
 
         if (!$lettre_trouve) {
@@ -98,21 +109,9 @@ if (isset($_POST["user_entry"])) {
 }
 
 
-
-
-//print_r($empty_table);
-
-// echo "\n trouve le mot suivant => ";
-// foreach ($empty_table as $element) {
-//     echo $element;
-// }
-
-
-
-
-// if (in_array("_ ", $empty_table)) {
-//     echo "\nLe mot à deviner était $random_word\n";
-//     echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
-// } else {
-//     echo "Bravo, tu as gagné la partie.\n";
-// }
+if ($essai_restant <= 0 && in_array("_", $empty_table)) {
+    echo "\nLe mot à deviner était $random_word\n";
+    echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
+} elseif (!in_array("_", $empty_table) && $essai_restant >= 0) {
+    echo "Bravo, tu as gagné la partie.\n";
+}

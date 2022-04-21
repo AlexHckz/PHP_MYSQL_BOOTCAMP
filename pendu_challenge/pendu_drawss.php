@@ -5,7 +5,7 @@ function drawPendu($etape)
 
   switch ($etape) {
     case 9:
-      print "\n
+      $printed = "\n
         \n
         \n
         \n
@@ -13,7 +13,7 @@ function drawPendu($etape)
         \n";
       break;
     case 8:
-      print "\n
+      $printed = "\n
         \n
         \n
         \n
@@ -22,7 +22,7 @@ function drawPendu($etape)
       break;
 
     case 7:
-      print "\n
+      $printed = "\n
         |\n
         |\n
         |\n
@@ -31,7 +31,7 @@ function drawPendu($etape)
       break;
 
     case 6:
-      print "        ______\n
+      $printed = "        ______\n
         |\n
         |\n
         |\n
@@ -40,7 +40,7 @@ function drawPendu($etape)
       break;
 
     case 5:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |\n
         |\n
@@ -49,7 +49,7 @@ function drawPendu($etape)
       break;
 
     case 4:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |\n
@@ -58,7 +58,7 @@ function drawPendu($etape)
       break;
 
     case 3:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |   | \n
@@ -67,7 +67,7 @@ function drawPendu($etape)
       break;
 
     case 2:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |  /| \n
@@ -76,7 +76,7 @@ function drawPendu($etape)
       break;
 
     case 1:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |  /|\\\n
@@ -85,7 +85,7 @@ function drawPendu($etape)
       break;
 
     case 0:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |  /|\\\n
@@ -94,7 +94,7 @@ function drawPendu($etape)
       break;
 
     case -1:
-      print "        ______\n
+      $printed = "        ______\n
         |   |\n
         |   O\n
         |  /|\\\n
@@ -102,4 +102,5 @@ function drawPendu($etape)
        _|_____________\n";
       break;
   }
+  return $printed;
 }
