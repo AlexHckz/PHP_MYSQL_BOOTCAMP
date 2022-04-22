@@ -7,3 +7,6 @@ html {
     font-size: calc(1.025rem + .9vw);
 }
 
+.pendu-wrapper span {
+    margin-left: 2em;
+}

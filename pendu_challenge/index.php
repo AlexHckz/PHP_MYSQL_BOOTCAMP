@@ -36,7 +36,7 @@ include './pendu.php';
 
             <div class="container pendu-wrapper">
                 <div>
-                    <?php echo $printed; ?>
+                    <?php drawPendu($essai_restant); ?>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@ include './pendu.php';
                     </div>
                     <input type="hidden" name="data_word" value="<?php echo $random_word; ?>">
                     <input type="hidden" name="data_try" value="<?php echo $essai_restant; ?>">
-                    <input type="hidden" name="data_try" value="<?php echo $printed; ?>">
+                    <input type="hidden" name="data_printed" value="<?php echo $printed; ?>">
                     <input type="hidden" name="data_answer" value="<?php echo $motCache; ?>">
                     <input type="hidden" name="data_table" value="<?php echo implode(" ", $empty_table); ?>">
                     <button type="submit" class="btn btn-primary mb-3">Submit</button>
@@ -94,6 +94,10 @@ include './pendu.php';
                                     </div>';
                 }
                 ?>
+
+                <div class="end_message">
+                    <?php echo $end_message ?>
+                </div>
             </div>
 
 

@@ -28,7 +28,7 @@ if (empty($random_number)) {
 
 if (!empty($_POST["data_word"]) && !empty($_POST["data_try"])) {
     $random_word = $_POST["data_word"];
-    $essai_restant = $_POST["data_try"];
+    $essai_restant = intval($_POST["data_try"]);
 } else {
     $random_word = $liste_mots[$random_number];
     $essai_restant = 9;
@@ -58,7 +58,7 @@ if (empty($_POST["data_table"])) {
 }
 
 if (empty($_POST["data_printed"])) {
-    $printed = null;
+    $printed = "9";
 } else {
     $printed = $_POST["data_printed"];
 }
@@ -103,15 +103,28 @@ if (isset($_POST["user_entry"])) {
         if (!$lettre_trouve) {
             $loose = true;
             $essai_restant--;
-            drawPendu($essai_restant);
+            // drawPendu($essai_restant);
         }
     }
 }
 
 
 if ($essai_restant <= 0 && in_array("_", $empty_table)) {
-    echo "\nLe mot à deviner était $random_word\n";
-    echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
+    $end_message = '
+                    <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Too bad!</h4>
+                    <p>Le mot à deviner était ' . $random_word . '</p>
+                    <hr>
+                    <p class="mb-0">Tu as perdu la partie. Pour rejouer, actualise la page.</p>
+                    </div>
+                ';
 } elseif (!in_array("_", $empty_table) && $essai_restant >= 0) {
-    echo "Bravo, tu as gagné la partie.\n";
+    $end_message = '
+                    <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Bravo!</h4>
+                    <p>Le mot à deviner était ' . $random_word . '</p>
+                    <hr>
+                    <p class="mb-0">Tu as gagné la partie. Pour rejouer, actualise la page.</p>
+                    </div>
+                ';
 }

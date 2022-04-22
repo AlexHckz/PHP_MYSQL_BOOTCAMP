@@ -5,102 +5,107 @@ function drawPendu($etape)
 
   switch ($etape) {
     case 9:
-      $printed = "\n
-        \n
-        \n
-        \n
-        \n
-        \n";
+      $printed = "<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>";
       break;
     case 8:
-      $printed = "\n
-        \n
-        \n
-        \n
-        \n
-       _______________\n";
+      $printed = "<br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+       _______________<br><br>";
       break;
 
     case 7:
-      $printed = "\n
-        |\n
-        |\n
-        |\n
-        |\n
-       _|_____________\n";
+      $printed = "<br>
+        |<br>
+        |<br>
+        |<br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 6:
-      $printed = "        ______\n
-        |\n
-        |\n
-        |\n
-        |\n
-       _|_____________\n";
+      $printed = "        
+        ______<br>
+        |<br>
+        |<br>
+        |<br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 5:
-      $printed = "        ______\n
-        |   |\n
-        |\n
-        |\n
-        |\n
-       _|_____________\n";
+      $printed = "        
+        ______<br>
+        |     |<br>
+        |<br>
+        |<br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 4:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |\n
-        |\n
-       _|_____________\n";
+      $printed = "        
+        ______<br>
+        |     <span>|</span><br>
+        |     <span>O</span><br>
+        |<br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 3:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |   | \n
-        |\n
-       _|_____________\n";
+      $printed = "        
+        ______<br>
+        |     <span>|</span><br>
+        |     <span>O</span><br>
+        |     <span>|</span><br>
+        |  <br>
+        |_____________<br>";
       break;
 
     case 2:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |  /| \n
-        |\n
-       _|_____________\n";
+      $printed = "        ______<br>
+        |     <span> |</span><br>
+        |      <span>O</span><br>
+        |     <span>/|</span><br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 1:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |  /|\\\n
-        |\n
-       _|_____________\n";
+      $printed = "        ______<br>
+        |      <span> |</span><br>
+        |       <span>O</span><br>
+        |      <span>/|\</span><br>
+        |<br>
+        |_____________<br>";
       break;
 
     case 0:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |  /|\\\n
-        |  /  \n
-       _|_____________\n";
+      $printed = "        ______<br>
+        |      <span> |</span><br>
+        |       <span>O</span><br>
+        |      <span>/|\</span><br>
+        |      <span>/</span><br>
+        |_____________<br>";
       break;
 
     case -1:
-      $printed = "        ______\n
-        |   |\n
-        |   O\n
-        |  /|\\\n
-        |  / \\\n
-       _|_____________\n";
+      $printed = "        ______<br>
+        |      <span> |</span><br>
+        |       <span>O</span><br>
+        |      <span>/|\</span><br>
+        |      <span>/ \</span><br>
+        |_____________<br>";
       break;
   }
+  echo $printed;
   return $printed;
 }
