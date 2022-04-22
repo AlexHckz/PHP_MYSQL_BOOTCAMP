@@ -92,6 +92,9 @@ article {
     height: auto;
     
 }
+h1 {
+    color: white;
+}
 h2 {
     margin: 0;
     margin-bottom: 4rem;

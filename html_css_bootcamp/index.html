@@ -8,11 +8,19 @@
 
     <title>CV - Alex C.</title>
 
+
+
+    <!-- CodyHouse CSS -->
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="https://unpkg.com/codyhouse-framework/main/assets/css/style.min.css">
+    <link rel="stylesheet" href="./style/codyhouse/scroll_effects/effects.css">
+    <link rel="stylesheet" href="./style/codyhouse/animated_headline/animated_headline.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+    <!-- My CSS -->
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/nav_and_footer.css">
 
@@ -27,7 +35,14 @@
 
     <header>
         <h1 class="title_font">Alex C.</h1>
-        <p>DEVELOPPEUR <b>FULLSTACK</b> JUNIOR</p>
+        <p class="text-xxl text-anim text-anim--clip js-text-anim">Developpeur
+            <span class="text-anim__wrapper js-text-anim__wrapper">
+                <i class="text-anim__word text-anim__word--in js-text-anim__word">PHP</i>
+                <i class="text-anim__word js-text-anim__word">Javascript</i>
+                <i class="text-anim__word js-text-anim__word">Fullstack</i>
+            </span>
+            Junior
+        </p>
     </header>
 
     <nav>
@@ -145,7 +160,7 @@
                 <h2 class="title_font title_no_margin_top">Expérience</h2>
 
                 <article>
-                    <div class="article-left-wrapper">
+                    <div class="article-left-wrapper reveal-fx reveal-fx--translate-right" data-reveal-fx-delay="100">
                         <img src="./img/CV/image_experience_1.png" class="fakeImg"></img>
                     </div>
                     <div class="article-right-wrapper">
@@ -174,7 +189,7 @@
                         </ul>
                     </div>
 
-                    <div class="article-right-wrapper">
+                    <div class="article-right-wrapper reveal-fx reveal-fx--translate-left" data-reveal-fx-delay="100">
                         <img src="./img/CV/image_experience_2.png" class="fakeImg"></img>
                     </div>
                 </article>
@@ -214,7 +229,7 @@
                 <h2 class="title_font title_no_margin_top">Formation</h2>
 
                 <article>
-                    <div class="article-left-wrapper">
+                    <div class="article-left-wrapper reveal-fx reveal-fx--translate-right" data-reveal-fx-delay="100">
                         <img src="./img/CV/image_formation_1.png" class="fakeImg"></img>
                     </div>
 
@@ -243,7 +258,7 @@
                         </ul>
                     </div>
 
-                    <div class="article-right-wrapper">
+                    <div class="article-right-wrapper reveal-fx reveal-fx--translate-left" data-reveal-fx-delay="100">
                         <img src="./img/CV/image_formation_2.png" class="fakeImg"></img>
                     </div>
                 </article>
@@ -296,6 +311,12 @@
 
     <!-- bootstrap js -->
     <!-- Optional JavaScript -->
+
+    <!-- CodyHouse JavaScript -->
+    <script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+    <script src="./style/codyhouse/scroll_effects/effects.js"></script>
+    <script src="./style/codyhouse/animated_headline/animated_headline.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
