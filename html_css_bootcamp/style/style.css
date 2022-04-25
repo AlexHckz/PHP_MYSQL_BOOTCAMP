@@ -131,15 +131,24 @@ hr {
 }
 
 /* boostrap overides */
-.btn-primary {
-  background-color: #91b3fa;
-  border-color: #91b3fa;
+.btn {
+    padding: 0.775rem 1.05rem;
+    border-radius: 0.45rem;
 }
+.btn-primary {
+  background-color: #fea59f;
+  border: 1px solid rgb(254 165 159);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #d989e0d6;
+    border: solid 1px #bf74d9;
+}
+
 /* carousel */
 .carousel-inner img {
   width: 500px;
 }
-
 
 #experience {
     background-color: #F9F9F9;

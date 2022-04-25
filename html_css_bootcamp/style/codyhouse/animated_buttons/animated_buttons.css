@@ -21,6 +21,7 @@ Usage: codyhouse.co/license
 }
 .back-to-top:hover {
   background-color: #d989e0d6;
+  border: solid 1px #bf74d9;
 }
 .back-to-top .icon {
   --size: 20px;

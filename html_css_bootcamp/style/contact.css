@@ -35,3 +35,6 @@ label {
 #contact h2 {
     margin-bottom: 3rem;
 }
+#contact .btn {
+    margin-top : 2em;
+}
