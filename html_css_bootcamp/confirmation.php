@@ -91,7 +91,7 @@ if (!empty($_POST["message"]) && !empty($_POST["email"])) {
                         <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\github-white.svg" class="networks_icons"></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/feed/">
+                    <a href="https://www.linkedin.com/feed/" class="linkedin">
                         <img src=".\src\fontawesome-free-6.1.1-desktop\svgs\brands\linkedin-white.svg" class="networks_icons"></a>
                 </li>
             </ul>
