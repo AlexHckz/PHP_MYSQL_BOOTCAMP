@@ -81,8 +81,8 @@ do {
 } while ($essai_restant > 0 && in_array("_ ", $empty_table));
 
 if (in_array("_ ", $empty_table)) {
-    echo "\nLe mot à deviner était $random_word\n";
-    echo "Tu as perdu la partie. Pour rejouer, relance le jeu.\n";
+    $display_end_message = true;
+    $end_message = "\nLe mot à deviner était $random_word\nTu as perdu la partie. Pour rejouer, relance le jeu.\n";
 } else {
-    echo "Bravo, tu as gagné la partie.\n";
+    $end_message = "Bravo, tu as gagné la partie.\n";
 }

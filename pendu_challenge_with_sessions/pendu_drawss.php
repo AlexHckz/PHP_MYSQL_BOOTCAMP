@@ -107,5 +107,5 @@ function drawPendu($etape)
       break;
   }
   echo $printed;
-  return $printed;
+  // return $printed;
 }

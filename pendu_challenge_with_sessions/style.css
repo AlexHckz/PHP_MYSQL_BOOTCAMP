@@ -1,0 +1,41 @@
+html {
+   height: 100%;
+   width: 100%;
+}
+body {
+    padding: 1em;
+}
+nav h1.display-1 {
+    color: #fff;
+    margin-right: 0.4em;
+}
+.h2, h2 {
+    font-size: calc(1.025rem + .9vw);
+}
+.pendu-wrapper span {
+    margin-left: 2em;
+}
+.motCache {
+    letter-spacing: 1rem;
+    font-size: 40px;
+}
+.clavier {
+    text-align: center;
+    cursor: pointer;
+}
+.form-check label.btn-secondary {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.2rem;
+}
+.title-wrapper p {
+    margin-top: 1rem;
+}
+.btn-check:active+.btn-secondary, .btn-check:checked+.btn-secondary, .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #c6c6c6;
+    border-color: #404040;
+}
+.btn.btn-secondary:hover {
+    background-color: #c6c6c6;
+}

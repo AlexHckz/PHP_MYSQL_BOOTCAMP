@@ -9,15 +9,17 @@ include './pendu.php';
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, world!</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 
-    <title>Hello, world!</title>
+    <!-- Personnal CSS -->
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
-<body class="bg-dark bg-gradient bg-opacity-25">
+<body class="bg-dark bg-opacity-25">
 
     <div class="container-fluid">
         <div class="row">
@@ -27,7 +29,7 @@ include './pendu.php';
             </div>
 
             <div class="word-wrapper">
-                <p><?= $motCache ?></p>
+                <p><?= echo $_SESSION["motCache"] ;?></p>
                 <p>Il te reste encore
                     <span class=" badge rounded-pill bg-warning"><?php echo $essai_restant; ?></span>
                     essais !
@@ -96,16 +98,16 @@ include './pendu.php';
                 ?>
 
                 <div class="end_message">
-                    <?php echo $end_message ?>
+                    <?php
+                    if (isset($end_message)) {
+                        echo $end_message;
+                    } else {
+                        echo "Let's play !";
+                    }
+                    ?>
                 </div>
             </div>
-
-
-
-
         </div>
-
-
     </div>
 
 
