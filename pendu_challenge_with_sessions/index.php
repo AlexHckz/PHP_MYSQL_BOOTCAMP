@@ -6,6 +6,7 @@ session_start();
 if (!isset($_SESSION["name"])) {
     header("location: inscription.php");
 }
+
 include './pendu.php';
 
 ?>
@@ -87,11 +88,9 @@ include './pendu.php';
                 ?>
 
                 <div class="end_message">
-                    <?php
-                    if (isset($end_message)) {
+                    <?php if (isset($end_message)) {
                         echo $end_message;
-                    }
-                    ?>
+                    } ?>
                 </div>
 
 

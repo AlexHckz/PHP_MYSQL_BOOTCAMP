@@ -4,6 +4,10 @@
 include './pendu_drawss.php';
 
 
+//on met le nombre de victoires a 0
+if (empty($_COOKIE["victoires"])) {
+    setcookie("victoires", 0, time() + 60 * 60 * 24 * 30);
+}
 
 //on fait choisir un mot dans une liste à l'ordinateur 
 $liste_mots = [
@@ -31,7 +35,6 @@ if (empty($_SESSION["random_word"]) && empty($_SESSION["essai_restant"]) && empt
 }
 
 //on cree un tableau avec toutes les lettres de l'alphabet
-
 if (empty($_SESSION["available_letters"])) {
     # code...
     $_SESSION["available_letters"] =
@@ -40,8 +43,6 @@ if (empty($_SESSION["available_letters"])) {
             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
         ];
 }
-
-
 
 
 //on decoupe le mot
@@ -53,8 +54,6 @@ $word_size = strlen($_SESSION["random_word"]);
 if (empty($_SESSION["empty_table"])) {
     $_SESSION["empty_table"] = [];
 }
-
-
 
 if (empty($_SESSION["motCache"])) {
     for ($i = 0; $i < $word_size; $i++) {
@@ -80,6 +79,7 @@ if (isset($_POST["user_entry"])) {
             $lettre_trouve = true;
         }
     }
+
     //on fait des actions en fonction du choix de la lettre  
     if ($lettre_trouve) {
         $win = true;
@@ -90,10 +90,9 @@ if (isset($_POST["user_entry"])) {
         $_SESSION["essai_restant"]--;
     }
 
-    $search = array_search($user_choice, $_SESSION["available_letters"]);
-
     //on enleve la lettre choisie du tableau 
-    if ($search != null) {
+    $search = array_search($user_choice, $_SESSION["available_letters"]);
+    if ($search != null || $search === 0) {
         # code...
         unset($_SESSION["available_letters"][$search]);
     }
@@ -102,6 +101,7 @@ if (isset($_POST["user_entry"])) {
 
 
 if ($_SESSION["essai_restant"] <= 0 && in_array("_", $_SESSION["empty_table"])) {
+    //on affiche un message de défaite
     $end_message = '
                     <div class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Too bad!</h4>
@@ -121,6 +121,5 @@ if ($_SESSION["essai_restant"] <= 0 && in_array("_", $_SESSION["empty_table"])) 
                     </div>
                 ';
 
-    $_COOKIE["victoires"] += 1;
-    $_SESSION["parties_gagnees"] += 1;
+    setcookie("victoires", $_COOKIE["victoires"] + 1, time() + 60 * 60 * 24 * 30);
 }

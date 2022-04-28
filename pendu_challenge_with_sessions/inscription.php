@@ -1,16 +1,6 @@
 <?php
-//exemple d'utilisation simple de la session et du cookie
 //fonction session_start : active la session sur cette page
 session_start();
-
-//je déclare les variables utilisées pour préremplir et je les initialise avec des chaînes vides
-$name = "";
-//si mes cookies existent, je les récupère pour préremplir les champs
-if (isset($_COOKIE["name"])) {
-    $name = $_COOKIE["name"];
-}
-
-
 
 ?>
 
@@ -38,7 +28,7 @@ if (isset($_COOKIE["name"])) {
         <div class="row">
             <div class="title-wrapper">
                 <h1 class="display-1">Inscription</h1>
-                <p>Créer ton pseudo pour le Pendu</p>
+                <p>Créée ton pseudo pour le Pendu</p>
             </div>
 
             <p>
@@ -50,10 +40,10 @@ if (isset($_COOKIE["name"])) {
             <form action="login.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label"></label>
-                    <input class="form-control" type="text" name="name" placeholder="nickname" />
+                    <input class="form-control" type="text" name="name" placeholder="pseudo" />
                 </div>
 
-                <button type="submit" class="btn btn-primary mb-3" name="form_connect">Submit</button>
+                <button type="submit" class="btn btn-primary mb-3" name="form_connect">Let's go!</button>
             </form>
 
         </div>

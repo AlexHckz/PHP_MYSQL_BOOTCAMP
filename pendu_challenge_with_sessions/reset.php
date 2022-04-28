@@ -12,8 +12,7 @@ $_SESSION["available_letters"] =
         "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
     ];
 
-if (!isset($_COOKIE["victoires"])) {
-    $_COOKIE["victoires"] = 0;
-}
 
 header('Location: index.php');
+
+//enlever header et inclure reset dans code de victoires ou defaites 

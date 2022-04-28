@@ -23,8 +23,6 @@ if (isset($_POST["form_connect"])) {
             setcookie("victoires", 0, time() + 60 * 60 * 24 * 30);
         }
 
-
-
         //puis on redirige l'utilisateur vers la page de son compte
         header("location: reset.php");
         //exit va stopper l'exécution de ce fichier

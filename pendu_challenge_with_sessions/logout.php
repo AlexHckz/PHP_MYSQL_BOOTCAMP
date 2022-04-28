@@ -6,6 +6,8 @@
 //même si c'est juste pour la détruire !
 session_start();
 
+
+
 //je désactive la session en détruisant absolument tout ce qu'elle contient
 $_SESSION = null;
 session_destroy();
